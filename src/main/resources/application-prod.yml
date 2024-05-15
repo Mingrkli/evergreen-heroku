@@ -1,6 +1,14 @@
 spring:
+  application:
+    name: NewTicket2
+
   datasource:
     url: jdbc:mysql://{PROD_BD_HOST}/{PROD_BD_NAME}
     username: {PROD_BD_USERNAME}
     password: {PROD_BD_PASSWORD}
     name: evergreen-heroku
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
