@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://{PROD_BD_HOST}/{PROD_BD_NAME}
+    username: {PROD_BD_USERNAME}
+    password: {PROD_BD_PASSWORD}
+    name: evergreen-heroku
