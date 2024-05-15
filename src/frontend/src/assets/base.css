@@ -1,0 +1,23 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+    --c-nav-bg: rgb(0, 150, 18);
+    --c-nav-icons: rgb(230, 230, 230);
+    --c-nav-icons-hover: rgb(0, 68, 20);
+    --c-aside: rgb(178, 223, 219);
+
+    --nav-height: 70px;
+
+    --c-message-top: rgb(0, 150, 136);
+    --c-message-bottom: rgb(176, 223, 219);
+
+    --transition: 300ms ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}

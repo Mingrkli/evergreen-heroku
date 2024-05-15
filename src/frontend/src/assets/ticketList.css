@@ -1,0 +1,76 @@
+#ticket-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+/* Ticket Title */
+#ticket-list-title {
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+#ticket-list-title a {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Table */
+#ticket-list table,
+#ticket-list td,
+#ticket-list th {
+    padding: 0.5rem;
+}
+
+#ticket-list table {
+    border: 1px solid black;
+}
+
+#ticket-list td {
+    border-top: 1px solid black;
+    border-right: 1px solid gray;
+}
+
+#ticket-list th {
+    border: 1px solid black;
+}
+
+#ticket-list table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+/* Table Head */
+#ticket-list table thead {
+    color: white;
+    background-color: var(--c-nav-bg);
+}
+
+/* Table Body */
+#ticket-list tbody tr {
+    transition: var(--transition);
+}
+
+#ticket-list tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+#ticket-list tbody tr:nth-child(even) {
+    background-color: rgb(237, 237, 237);
+}
+
+#ticket-list tbody tr:hover {
+    background-color: gray;
+
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+@import "./base.css";
+@import "./navbar.css";
+@import "./ticketView.css";
+@import "./ticketList.css";
+@import "./ticketCreate.css";
+
+#app {
+    height: 100vh;
+}
+
+.btn {
+    padding: 0.3rem 0.5rem;
+
+    color: white;
+    text-decoration: none;
+    background-color: rgb(55, 121, 235);
+
+    border-radius: 5px;
+}
