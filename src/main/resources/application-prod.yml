@@ -1,6 +1,3 @@
-server:
-  port: 8080
-
 spring:
   datasource:
     url: jdbc:mysql://{PROD_BD_HOST}/{PROD_BD_NAME}
