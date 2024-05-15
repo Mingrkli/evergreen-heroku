@@ -12,9 +12,9 @@ const router = createRouter({
             name: "Ticket List",
             component: TicketList,
         },
-        // This would later turn "/ticket:id" or something like that
+        // /:index means that the path now expects an index (or whatever you want to name it)
         {
-            path: "/ticket/4502",
+            path: "/ticket/:index/chat",
             name: "Ticket View",
             component: TicketView,
         },

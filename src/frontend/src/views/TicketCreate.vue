@@ -43,7 +43,7 @@
       </div>
 
       <div id="message-box">
-        <textarea placeholder="Type a message..."></textarea>
+        <textarea placeholder="Type a message...">This has not been implemented yet...</textarea>
         <div id="message-box-btns">
           <button type="submit" id="submit-btn">Submit</button>
         </div>
@@ -58,8 +58,8 @@ export default {
     return {
       ticket: {
         name: "",
-        created: "",
-        lastMessage: "",
+        created: "not implemented",
+        lastMessage: "not implemented",
         status: "Open",
         groupID: "not implemented",
         priority: "Low",
@@ -80,22 +80,26 @@ export default {
       this.created = currentDate;
       this.lastMessage = currentDate;
 
-      console.log(this.ticket);
+      // We'll save a copy of this.ticket to avoid mutating the original object and apparently it works
+      const ticketCopy = { ...this.ticket, created: currentDate, lastMessage: currentDate };
+
+      // TESTING
+      // console.log(ticketCopy);
 
       // Adds the ticket to the database
-      // fetch("http://localhost:8080/add", {
-      //     method: "POST",
-      //     headers: {
-      //         "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(this.ticket),
-      // }).then((data) => {
-      //     // TESTING
-      //     // console.log(data);
-      //
-      //     // Returns user to home
-      //     this.$router.push("/");
-      // });
+      fetch("http://localhost:8080/add", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(ticketCopy),
+      }).then((data) => {
+          // TESTING
+          // console.log(data);
+
+          // Returns user to home
+          this.$router.push("/");
+      });
     },
   },
 };

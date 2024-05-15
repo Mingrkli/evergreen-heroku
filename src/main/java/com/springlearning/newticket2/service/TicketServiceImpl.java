@@ -33,4 +33,15 @@ public class TicketServiceImpl implements TicketService {
     public List<Ticket> getTickets() {
         return (List<Ticket>) ticketRepository.findAll();
     }
+
+    /**
+     * Get the ticket by id
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Ticket getTicketById(long id) {
+        return ticketRepository.findById(id).get();
+    }
 }

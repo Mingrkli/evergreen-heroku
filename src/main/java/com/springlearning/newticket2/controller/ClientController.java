@@ -25,9 +25,19 @@ public class ClientController {
         return "Ticket added";
     }
 
+    /**
+     * Gets all the tickets form the database
+     * @return
+     */
     @CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
     @RequestMapping("/tickets")
     public List<Ticket> getTickets() {
         return ticketService.getTickets();
+    }
+
+    @CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+    @GetMapping("/ticket/{id}")
+    public Ticket getTicketById(@PathVariable long id) {
+        return ticketService.getTicketById(id);
     }
 }

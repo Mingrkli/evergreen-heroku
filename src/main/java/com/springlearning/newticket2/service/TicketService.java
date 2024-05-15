@@ -12,11 +12,18 @@ public interface TicketService {
      * @param ticket
      * @return
      */
-    public Ticket addTicket(Ticket ticket);
+    Ticket addTicket(Ticket ticket);
 
     /**
      * Gets the list of Tickets
      * @return
      */
-    public List<Ticket> getTickets();
+    List<Ticket> getTickets();
+
+    /**
+     * Get the ticket by id
+     * @param id
+     * @return
+     */
+    Ticket getTicketById(long id);
 }

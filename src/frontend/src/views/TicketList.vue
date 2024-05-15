@@ -21,9 +21,9 @@
 
             <tbody>
                 <tr
-                    v-for="ticket in tickets"
+                    v-for="(ticket, index) in tickets"
                     :key="ticket.id"
-                    @click="goToPage(4502)"
+                    @click="goToPage(index)"
                 >
                     <td>{{ ticket.id }}</td>
                     <td>{{ ticket.name }}</td>
@@ -58,7 +58,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 function goToPage(number) {
-    router.push({ path: `ticket/${number}` });
+    router.push({ path: `ticket/${Number(number + 1)}/chat` });
 }
 </script>
 
