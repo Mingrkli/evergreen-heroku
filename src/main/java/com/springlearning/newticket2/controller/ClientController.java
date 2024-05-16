@@ -18,7 +18,7 @@ public class ClientController {
      * @param ticket
      * @return
      */
-    @CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+    @CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
     @PostMapping("/add")
     public String addTicket(@RequestBody Ticket ticket) {
         ticketService.addTicket(ticket);
@@ -29,13 +29,13 @@ public class ClientController {
      * Gets all the tickets form the database
      * @return
      */
-    @CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+    @CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
     @RequestMapping("/tickets")
     public List<Ticket> getTickets() {
         return ticketService.getTickets();
     }
 
-    @CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+    @CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
     @GetMapping("/ticket/{id}")
     public Ticket getTicketById(@PathVariable long id) {
         return ticketService.getTicketById(id);
