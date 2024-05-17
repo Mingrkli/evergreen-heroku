@@ -26,7 +26,7 @@ public class Ticket {
     private long id;
     private String name;
     private String created;
-    private String lastMessage;
+    private String lastMessage; // chnaged to date
     private String status;
     private String groupID;
     private String priority;

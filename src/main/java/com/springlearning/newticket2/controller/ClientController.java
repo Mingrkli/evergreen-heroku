@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
 @RestController
 public class ClientController {
     // Repository
@@ -18,7 +19,6 @@ public class ClientController {
      * @param ticket
      * @return
      */
-    @CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
     @PostMapping("/add")
     public String addTicket(@RequestBody Ticket ticket) {
         ticketService.addTicket(ticket);
@@ -29,15 +29,16 @@ public class ClientController {
      * Gets all the tickets form the database
      * @return
      */
-    @CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
     @RequestMapping("/tickets")
     public List<Ticket> getTickets() {
         return ticketService.getTickets();
     }
 
-    @CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
     @GetMapping("/ticket/{id}")
     public Ticket getTicketById(@PathVariable long id) {
         return ticketService.getTicketById(id);
     }
+
+    // add server side validation
 }
+
