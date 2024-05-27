@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "https://mingli.greenriverdev.com/", allowedHeaders = "*")
 @RestController
 public class TicketMessageController {
     // Repository
@@ -19,7 +20,6 @@ public class TicketMessageController {
      * @param ticketId
      * @return
      */
-    @CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
     @PostMapping("/add/message/{ticketId}")
     public String addTicketMessage(@RequestBody TicketMessage ticketMessage, @PathVariable("ticketId") int ticketId) {
         ticketMessageService.addTicketMessage(ticketMessage, ticketId);
@@ -31,7 +31,6 @@ public class TicketMessageController {
      * @param ticketId
      * @return
      */
-    @CrossOrigin(origins = "https://mingli.greenriverdev.com", allowedHeaders = "*")
     @GetMapping("/ticket/{ticketId}/messages")
     public List<TicketMessage> getTicketMessagesByTicketId(@PathVariable(value = "ticketId") Long ticketId) {
         return ticketMessageService.getTicketMessagesByTicketId(ticketId);
