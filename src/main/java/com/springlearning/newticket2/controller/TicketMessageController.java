@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://mingli.greenriverdev.com/", allowedHeaders = "*")
+@CrossOrigin(origins = "https://mingli.greenriverdev.com//", allowedHeaders = "*")
 @RestController
 public class TicketMessageController {
     // Repository

@@ -26,4 +26,10 @@ public interface TicketService {
      * @return
      */
     Ticket getTicketById(long id);
+
+    /**
+     * Deletes the ticket by id
+     * @param id ticket id
+     */
+    public void deleteTicket(long id);
 }

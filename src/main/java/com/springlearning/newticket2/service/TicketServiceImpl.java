@@ -47,4 +47,11 @@ public class TicketServiceImpl implements TicketService {
     public Ticket getTicketById(long id) {
         return ticketRepository.findById(id).get();
     }
+
+    /**
+     * Deletes the ticket by id
+     * @param id ticket id
+     */
+    @Override
+    public void deleteTicket(long id) { ticketRepository.deleteById(id); }
 }
