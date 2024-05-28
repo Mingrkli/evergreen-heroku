@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin(origins = "https://mingli.greenriverdev.com//", allowedHeaders = "*")
+@CrossOrigin(origins = "https://mingli.greenriverdev.com/", allowedHeaders = "*")
 @RestController
 public class ClientController {
     // Repository
